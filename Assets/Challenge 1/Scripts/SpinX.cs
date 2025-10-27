@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public class Spin : MonoBehaviour
+public class SpinX : MonoBehaviour
 {
+    public float spinSpeed; // degrees per sec
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,6 +13,7 @@ public class Spin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.Rotate(Vector3.forward, spinSpeed * Time.deltaTime);
         
     }
 }
